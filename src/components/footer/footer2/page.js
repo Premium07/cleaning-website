@@ -55,12 +55,12 @@ const Footer2 = () => {
         <div className="flex flex-col gap-1">
           {contacts.map((contact, index) => {
             return (
-              <div className="flex flex-col gap-2">
-                <Link key={index} href="#" className="text-sm flex gap-2 items-center hover:text-gray-400">
+              <div key={index} className="flex flex-col gap-2">
+                <Link href="#" className="text-sm flex gap-2 items-center hover:text-gray-400">
                   <FaPhone/>
                   {contact.number}
                 </Link>
-                <Link key={index} href="#" className="text-sm flex gap-2 items-center hover:text-gray-400">
+                <Link href="#" className="text-sm flex gap-2 items-center hover:text-gray-400">
                   <IoMail/>
                   {contact.email}
                 </Link>

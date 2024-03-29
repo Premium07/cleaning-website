@@ -21,7 +21,7 @@ function Footer() {
           <div className="flex gap-6">
             {footerlinks.map((footerlink, index) => {
               return (
-                <Link key={index} href="#" className="text-sm hover:text-gray-400">
+                <Link key={footerlinks} href="#" className="text-sm hover:text-gray-400">
                   {footerlink}
                 </Link>
               );

@@ -10,11 +10,15 @@ import { HiClock } from "react-icons/hi2";
 
 const contacts = [
   {
-    number: "123455678",
-    email: "support@gmail.com",
-    street: "380 Address, Street",
-    timings: "Sunday-Friday 9:00am-10pm",
+    item: "123455678",
+    icon: <FaPhone />,
   },
+  {
+    item: "support@gmail.com",
+    icon: <IoMail />,
+  },
+  { item: "380 Address, Street", icon: <FaLocationDot /> },
+  { item: "Sunday-Friday 9:00am-10pm", icon: <HiClock /> },
 ];
 
 function Contact() {
@@ -27,32 +31,20 @@ function Contact() {
         <FaBehance />
       </div>
       <div className="flex h-[100%] text-white gap-4 items-center justify-end tablet:-[80%]  tablet:justify-end">
-        {contacts.map((contact, index) => {
-          // console.log(contact.number);
-          return (
-            <ul
-              key={index}
-              className="text-[16px] text-white flex gap-4 tablet:text-right tablet:text-sm"
-            >
-              <li className="border-r-2 px-2 flex items-center justify-center gap-1 tablet:px-1">
-                <FaPhone />
-                {contact.number}
+        <ul className="text-[16px] text-white flex gap-4 tablet:text-right tablet:text-sm">
+          {contacts.map((contact, index) => {
+            // console.log(contact.number);
+            return (
+              <li
+                key={index}
+                className="border-r-2 px-2 flex items-center justify-center gap-1 tablet:px-1"
+              >
+                {contact.icon}
+                {contact.item}
               </li>
-              <li className="border-r-2 px-2 flex items-center justify-center gap-1 tablet:px-1">
-                <IoMail />
-                {contact.email}
-              </li>
-              <li className="border-r-2 px-4 flex items-center justify-center gap-1 tablet:px-1">
-                <FaLocationDot />
-                {contact.street}
-              </li>
-              <li className="px-2 flex items-center justify-center gap-1 tablet:px-1">
-                <HiClock />
-                {contact.timings}
-              </li>
-            </ul>
-          );
-        })}
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

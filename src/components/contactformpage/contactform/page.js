@@ -30,6 +30,7 @@ const ContactForm = () => {
         height={100}
         width={100}
         quality={100}
+        alt="contactimage"
         className="w-[85px] absolute -top-10 -left-10 transform translate-x-4 translate-y-4 -rotate-[35deg] mobile:h-10 mobile:w-10 mobile:object-cover mobile:-left-6 mobile:-top-6"
       />
       <div className="text-center">

@@ -10,8 +10,7 @@ function ContactImage() {
         height={500}
         width={500}
         quality={100}
-        className=""
-        alt="ContactsImage"
+        alt="ContactImage"
       />
     </div>
   );

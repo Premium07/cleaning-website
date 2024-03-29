@@ -10,11 +10,11 @@ import Link from "next/link";
 
 const Footer1 = () => {
   let icons = [
-    <FaFacebook />,
-    <FaTwitter />,
-    <FaInstagram />,
-    <FaLinkedin />,
-    <FaGoogle />,
+    <FaFacebook key={1} />,
+    <FaTwitter key={2} />,
+    <FaInstagram key={3}/>,
+    <FaLinkedin key={4}/>,
+    <FaGoogle key={5}/>,
   ];
   return (
     <div className="w-[30%] flex flex-col gap-5 p-2 mobile:mt-5 mobile:w-full">
@@ -30,8 +30,12 @@ const Footer1 = () => {
         purus sit amet luctus venenatis.
       </p>
       <div className="flex gap-4 cursor-pointer text-sm">
-        {icons.map((icon, index)=> {
-          return <Link key={index} href="#" className="hover:text-gray-400">{icon}</Link>;
+        {icons.map((icon, index) => {
+          return (
+            <Link key={index} href="#" className="hover:text-gray-400">
+              {icon}
+            </Link>
+          );
         })}
       </div>
     </div>
